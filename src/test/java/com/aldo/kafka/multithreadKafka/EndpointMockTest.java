@@ -31,7 +31,9 @@ public class EndpointMockTest {
                 )
                 .subscribe(System.out::println);
 
+
         Thread.sleep(1000);
+        verify(getRequestedFor(urlEqualTo("/pippo")));
     }
 
     private void givenEndpointReturns() {
